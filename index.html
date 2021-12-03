@@ -28,11 +28,11 @@
 
                     <!-- Single image -->
                     <div class="single-big-img">
-                        <img src="img/01.jpg" alt="Img 1">
+                        <img :src="slides[currentActiveSlide].image" :alt="slides[currentActiveSlide].title">
 
                         <div class="text-big-img">
-                            <h3>lorem</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident corporis unde vitae delectus vel facere nisi, magni mollitia temporibus aliquam, voluptate omquam!</p>
+                            <h3>{{ slides[currentActiveSlide].title }}</h3>
+                            <p>{{ slides[currentActiveSlide].text }}</p>
                         </div>
                     </div>
 
@@ -53,26 +53,9 @@
                     </div>
 
                     <!-- Single image -->
-                    <div class="single-thumb-img active">
-                        <img src="img/01.jpg" alt="Img 1">
+                    <div v-for="element, index in slides" class="single-thumb-img" :class="{ 'active': index === currentActiveSlide }">
+                        <img :src="element.image" :alt="element.title">
                     </div>
-
-                    <div class="single-thumb-img">
-                        <img src="img/02.jpg" alt="Img 2">
-                    </div>
-
-                    <div class="single-thumb-img">
-                        <img src="img/03.jpg" alt="Img 3">
-                    </div>
-
-                    <div class="single-thumb-img">
-                        <img src="img/04.jpg" alt="Img 4">
-                    </div>
-
-                    <div class="single-thumb-img">
-                        <img src="img/05.jpg" alt="Img 5">
-                    </div>
-
                 </div>
 
             </div>
