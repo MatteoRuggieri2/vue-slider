@@ -42,10 +42,6 @@ img{
 
 .single-big-img{
     position: relative;
-    display: none;
-}
-
-.single-big-img.active{
     display: block;
 }
 
