@@ -1,0 +1,106 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*COMMON*/
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.app-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider{
+    width: 60%;
+    height: 45%;
+    display: flex;
+
+    /*Test*/
+    background-color: aquamarine;
+}
+
+.slider img{
+    object-fit: cover;
+}
+
+/* MAIN */
+/* Big Img Container */
+.big-img-container{
+    width: 80%;
+    height: 100%;
+    position: relative;
+}
+
+.single-big-img{
+    position: relative;
+    display: none;
+}
+
+.single-big-img.active{
+    display: block;
+}
+
+.single-big-img .text-big-img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    text-align: right;
+    color: white;
+}
+
+/* Thumb Img Container */
+.thumb-img-container{
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+
+.single-thumb-img{
+    height: 20%;
+    filter: brightness(0.4);
+}
+
+.single-thumb-img.active{
+    filter: brightness(1);
+    border: 3px solid rgb(167, 167, 167);
+}
+
+/* Single Big Img */
+.single-big-img{
+    width: 100%;
+    height: 100%;
+}
+
+ .chevron-button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(167, 167, 167, 0.7);
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.chevron-button.chevron-up-icon{
+    top: 10px;
+}
+
+.chevron-button.chevron-down-icon{
+    bottom: 10px;
+}
