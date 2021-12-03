@@ -61,6 +61,14 @@ const app = new Vue(
             clickSlide: function(index) {
                 this.currentActiveSlide = index;
             }
+        },
+
+        created: {
+            autoSlide: function() {
+                setInterval(() => {
+                    this.currentActiveSlide++
+                }, 3000);
+            }
         }
     }
 );
