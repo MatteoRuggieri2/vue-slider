@@ -56,6 +56,10 @@ const app = new Vue(
                 } else {
                     this.currentActiveSlide = this.slides.length - 1
                 }
+            },
+
+            clickSlide: function(index) {
+                this.currentActiveSlide = index;
             }
         }
     }
