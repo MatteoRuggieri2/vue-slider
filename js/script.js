@@ -42,7 +42,21 @@ const app = new Vue(
             ]
         },
         methods: {
+            nextSlide: function() {
+                if(this.currentActiveSlide < this.slides.length - 1){
+                    this.currentActiveSlide++
+                } else {
+                    this.currentActiveSlide = 0
+                }
+            },
 
+            previousSlide: function() {
+                if(this.currentActiveSlide > 0) {
+                    this.currentActiveSlide--
+                } else {
+                    this.currentActiveSlide = this.slides.length - 1
+                }
+            }
         }
     }
 );
