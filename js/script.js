@@ -13,6 +13,7 @@ const app = new Vue(
         el: '#root',
         data: {
             currentActiveSlide: 0,
+            autoPlay: false,
             slides: [
                 {
                     image: 'img/01.jpg',
@@ -63,9 +64,13 @@ const app = new Vue(
             },
 
             autoSlide: function() {
-                setInterval(() => {
+                this.autoPlay = setInterval(() => {
                     this.nextSlide()
                 }, 3000);
+            },
+
+            stopAutoPlay: function() {
+                clearInterval(this.autoPlay)
             }
         },
 
