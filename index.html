@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- VueJs -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
 
@@ -53,7 +53,7 @@
                     </div>
 
                     <!-- Single image -->
-                    <div @click="clickSlide(index)" v-for="element, index in slides" class="single-thumb-img" :class="{ 'active': index === currentActiveSlide }">
+                    <div @click="clickSlide(index)" v-for="(element, index) in slides" class="single-thumb-img" :class="{ 'active': index === currentActiveSlide }">
                         <img :src="element.image" :alt="element.title">
                     </div>
                 </div>
